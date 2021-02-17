@@ -1,0 +1,37 @@
+{
+  "schemaVersion": 1,
+  "id": "cns",
+  "version": "${version}",
+
+  "name": "Chiseled n' Stitched",
+  "description": "This is a port of Chisel from 1.12.2 forge by Team Chisel",
+  "authors": [
+    "Me!"
+  ],
+  "contact": {
+    "homepage": "https://fabricmc.net/",
+    "sources": "https://github.com/FabricMC/fabric-example-mod"
+  },
+
+  "license": "CC0-1.0",
+  "icon": "assets/modid/icon.png",
+
+  "environment": "*",
+  "entrypoints": {
+    "main": [
+      "net.kwright02.cns.Main"
+    ]
+  },
+  "mixins": [
+    "cns.mixins.json"
+  ],
+
+  "depends": {
+    "fabricloader": ">=0.7.4",
+    "fabric": "*",
+    "minecraft": "1.16.x"
+  },
+  "suggests": {
+    "another-mod": "*"
+  }
+}

@@ -36,7 +36,7 @@ public class BlockOfs {
         for(int i = 0; i < vanillaVariants.length; i++){
             String s = types[i];
             System.out.println("Registering type " + s + " for blockpath " + blockPath);
-            Block b = new Block(FabricBlockSettings.of(Material.WOOD).strength(0.4f).sounds(BlockSoundGroup.WOOD).breakByTool(FabricToolTags.AXES));
+            Block b = new Block(FabricBlockSettings.of(Material.METAL).strength(0.4f).sounds(BlockSoundGroup.METAL).breakByTool(FabricToolTags.PICKAXES));
             BlockItem bi = new BlockItem(b, new FabricItemSettings().group(MOD_GROUP));
             registeredBlocks.put(s + "_" + blockPath, b);
             registeredItems.put(s + "_" + blockPath, bi);

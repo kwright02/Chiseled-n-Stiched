@@ -32,6 +32,7 @@ public class WoodsAndMires extends Registrar {
     public static HashMap<String, BlockItem> registeredItems = new HashMap<>();
 
     public static String[] plankVariants = { "pine_planks" };
+    public static String[] logVariants = { "pine_log" };
 
     @Override
     public void registerVariants() {
@@ -45,15 +46,18 @@ public class WoodsAndMires extends Registrar {
                     StyleRegistry.INSTANCE.registerBlock(style, variant, b, bi);
                 }
             }
+//            for(String s : Logs.types){
+//                for(String variant: logVariants){
+//                    Block b = new Block(FabricBlockSettings.of(Material.WOOD).strength(0.4f).sounds(BlockSoundGroup.WOOD).breakByTool(FabricToolTags.AXES));
+//                    BlockItem bi = new BlockItem(b, new FabricItemSettings().group(itemGroup));
+//                    registeredBlocks.put(s + "_" + variant, b);
+//                    registeredItems.put(s + "_" + variant, bi);
+//                    StyleRegistry.INSTANCE.registerBlock(s, variant, b, bi);
+//                }
+//            }
         } else {
             System.out.println("Skipped woodsandmires variants");
         }
     }
-
-    @Override
-    public boolean isModPresent() {
-       return FabricLoader.getInstance().isModLoaded(mod_name);
-    }
-
 
 }

@@ -1,5 +1,6 @@
 package net.kwright02.cns.modHandlers;
 
+import net.fabricmc.loader.api.FabricLoader;
 import net.minecraft.item.ItemGroup;
 
 public class Registrar {
@@ -10,7 +11,7 @@ public class Registrar {
 
     }
     public boolean isModPresent() {
-        return false;
+        return FabricLoader.getInstance().isModLoaded(mod_name);
     }
 
     public static void setModName(String name){

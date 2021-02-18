@@ -23,9 +23,6 @@ public class WoodsAndMires extends Registrar {
 
     static {
         mod_name = "woods_and_mires";
-        itemGroup = FabricItemGroupBuilder.build(
-                new Identifier("cns", mod_name),
-                () -> new ItemStack(Registry.BLOCK.get(new Identifier(mod_name + ":pine_planks"))));
     }
 
     public static HashMap<String, Block> registeredBlocks = new HashMap<>();
@@ -37,6 +34,9 @@ public class WoodsAndMires extends Registrar {
     @Override
     public void registerVariants() {
         if(isModPresent()){
+            itemGroup = FabricItemGroupBuilder.build(
+                    new Identifier("cns", mod_name),
+                    () -> new ItemStack(Registry.BLOCK.get(new Identifier(mod_name + ":pine_planks"))));
             for(String style : Planks.types){
                 for(String variant : plankVariants) {
                     Block b = new Block(FabricBlockSettings.of(Material.WOOD).strength(0.4f).sounds(BlockSoundGroup.WOOD).breakByTool(FabricToolTags.AXES));

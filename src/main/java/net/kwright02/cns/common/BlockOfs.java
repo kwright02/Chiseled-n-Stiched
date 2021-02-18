@@ -33,7 +33,7 @@ public class BlockOfs {
     }
 
     public static void register(String blockPath){
-        for(int i = 0; i < vanillaVariants.length; i++){
+        for(int i = 0; i < types.length; i++){
             String s = types[i];
             System.out.println("Registering type " + s + " for blockpath " + blockPath);
             Block b = new Block(FabricBlockSettings.of(Material.METAL).strength(0.4f).sounds(BlockSoundGroup.METAL).breakByTool(FabricToolTags.PICKAXES));

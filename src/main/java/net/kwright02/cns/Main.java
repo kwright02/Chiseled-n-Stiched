@@ -4,6 +4,7 @@ import net.fabricmc.api.ModInitializer;
 import net.fabricmc.fabric.api.client.itemgroup.FabricItemGroupBuilder;
 import net.kwright02.cns.common.BlockOfs;
 import net.kwright02.cns.common.Planks;
+import net.kwright02.cns.common.Stone;
 import net.kwright02.cns.modHandlers.WoodsAndMires;
 import net.minecraft.block.Blocks;
 import net.minecraft.item.ItemGroup;
@@ -22,6 +23,7 @@ public class Main implements ModInitializer {
 	public void onInitialize() {
 		Planks.registerVanillaVariants();
 		BlockOfs.registerVanillaVariants();
+		Stone.registerVanillaVariants();
 		//Mod inits
 		wam.registerVariants();
 
